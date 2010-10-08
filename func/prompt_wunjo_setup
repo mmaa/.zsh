@@ -128,11 +128,13 @@ prompt_wunjo_setup() {
   # fi
   PROMPT+="$pc[path]%(2~.%~.%/)$pc[reset]"
 
+  PROMPT+="%(?.. $pc[rc]exited %1v$pc[reset])"
+
+
 #######################################################
   PROMPT+="\$(prompt_wunjo_scm_status)"
 #######################################################
 
-  PROMPT+="%(?.. $pc[rc]exited %1v$pc[reset])"
   PROMPT+="
 "
   # PROMPT+="$pc[hist]%h$pc[reset] "
