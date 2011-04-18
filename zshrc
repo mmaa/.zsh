@@ -1,15 +1,12 @@
-fpath=($fpath $HOME/.zsh/func)
-typeset -U fpath
-
 autoload -U compinit
 compinit
-source $fpath/git-flow-completion.zsh
 
 setopt promptsubst
 autoload -U promptinit
 promptinit
 prompt wunjo
 
+source ~/.zsh/func/git-flow-completion.zsh
 
 export HISTFILE=$HOME/.history
 export HISTSIZE=99999
