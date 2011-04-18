@@ -1,30 +1,35 @@
-setopt promptsubst
+fpath=($fpath $HOME/.zsh/func)
+typeset -U fpath
 
-# Load the prompt theme system
+autoload -U compinit
+compinit
+source $fpath/git-flow-completion.zsh
+
+setopt promptsubst
 autoload -U promptinit
 promptinit
-
-# Use the wunjo prompt theme
 prompt wunjo
 
-# export PS1=$'%(#.%{\e[0;31m%}%~.%{\e[0;34m%}%~)%{\e[0m%}%# '
-# export PS1=$'\n%(#.%{\e[0;31m%}%~.%{\e[0;34m%}%~)\n%{\e[0m%}%# '
 
+export HISTFILE=$HOME/.history
 export HISTSIZE=99999
 export SAVEHIST=99999
-export HISTFILE=$HOME/.history
-setopt append_history
-# setopt share_history
+
+setopt hist_ignore_dups # ignore duplication command history list
+setopt share_history # share command history data
+
 setopt hist_verify
 setopt inc_append_history
+setopt extended_history
 setopt hist_expire_dups_first
 setopt hist_ignore_space
-setopt hist_ignore_all_dups
 
-# setopt SHARE_HISTORY
+setopt SHARE_HISTORY
 setopt APPEND_HISTORY
 
-export EDITOR='mate -w'
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;32'
+
 export PGDATA='/usr/local/var/postgres/'
 
 alias .='pwd'
@@ -34,9 +39,6 @@ alias ....='cd ../../..'
 alias ls='ls -F'
 alias la='ls -F -A'
 alias ll='ls -F -A -o -h'
-alias rm='rm -i'
-alias mv='mv -i'
-alias cp='cp -i'
 alias top='top -o cpu -s 2 -i 2'
 alias pg='ps aux | grep'
 
@@ -49,6 +51,7 @@ alias gm='git commit -m'
 alias gb='git branch'
 alias gd='git diff head'
 alias gc='git checkout'
+alias gf='git flow'
 
 alias ns='sudo kill $(cat /usr/local/nginx/logs/nginx.pid)'
 alias nr='sudo kill -HUP $(cat /usr/local/nginx/logs/nginx.pid)'
@@ -66,18 +69,22 @@ alias gmi='gem install'
 alias gmu='gem update'
 
 alias ru='rvm get head && rvm reload'
-alias bu='brew update && brew outdated'
+alias bu="brew update && brew outdated"
 
 alias check='openssl sha1 -c'
 
 alias hg='cat ~/.history | grep'
 
-alias alpha='ssh root@app1.alpha.ec2.oib.com'
+alias alpha='ssh root@app.mmaa.ec2.oib.com'
+alias alphadeploy='HOSTS=app.mmaa.ec2.oib.com cap production deploy:frontend'
+alias staging='ssh root@ec2-184-72-188-76.compute-1.amazonaws.com'
 alias hudson='ssh -l root -L 8080:localhost:8080 collect.prod.ec2.oib.com'
+alias jenkins='ssh -l ubuntu -L 8080:localhost:8080 ubuntu@ec2-50-17-93-145.compute-1.amazonaws.com'
 alias hudson-ct='ssh -l root -L 8080:localhost:8080 50.16.230.56'
 alias zenoss='ssh -l root -L 9090:localhost:9090 collect.prod.ec2.oib.com'
 alias inboxscore='ssh root@app1.is.prod.ec2.oib.com'
+alias subjectlines='ssh root@app1.sl.prod.ec2.oib.com'
 
-export PATH=/usr/local/nginx/sbin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
