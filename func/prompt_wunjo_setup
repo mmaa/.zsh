@@ -104,7 +104,7 @@ prompt_wunjo_setup() {
   pc[scm_branch]='yellow'
   pc[scm_commitid]='Yellow'
   pc[scm_status_dirty]='Red'
-  pc[scm_status_staged]='Green'
+  pc[scm_status_staged]='green'
   # pc[#]='Yellow'
   pc[#]='default'
   for cn in ${(k)pc}; do
@@ -148,7 +148,7 @@ prompt_wunjo_setup() {
     RPROMPT+="$p_date "
   fi
   # RPROMPT+="$pc[user]%n$pc[reset]"
-  # RPROMPT+=" $p_line"
+  RPROMPT+=" $p_line"
 
   export PROMPT RPROMPT
   precmd_functions+='prompt_wunjo_precmd'
