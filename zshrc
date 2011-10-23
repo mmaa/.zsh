@@ -8,6 +8,11 @@ prompt wunjo
 
 source ~/.zsh/func/git-flow-completion.zsh
 
+# export CC='gcc-4.2'
+export EDITOR='vim'
+
+export CLICOLOR=1;
+
 export HISTFILE=$HOME/.history
 export HISTSIZE=99999
 export SAVEHIST=99999
@@ -29,7 +34,11 @@ export GREP_COLOR='1;32'
 
 export PGDATA='/usr/local/var/postgres/'
 
-alias .='pwd'
+alias m="mvim ."
+alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
+
+alias a="./a.out"
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -49,6 +58,7 @@ alias gb='git branch'
 alias gd='git diff head'
 alias gc='git checkout'
 alias gf='git flow'
+alias gh='github'
 
 alias ns='sudo kill $(cat /usr/local/nginx/logs/nginx.pid)'
 alias nr='sudo kill -HUP $(cat /usr/local/nginx/logs/nginx.pid)'
@@ -57,6 +67,7 @@ alias nc='mate /etc/hosts /usr/local/nginx/conf/nginx.conf'
 alias rs='rails server'
 alias rc='rails console'
 alias rg='rails generate'
+alias rr='rails runner'
 
 alias ss='script/server webrick'
 alias sc='script/console'
@@ -65,12 +76,14 @@ alias sg='script/generate'
 alias gmi='gem install'
 alias gmu='gem update'
 
-alias ru='rvm get head && rvm reload'
+alias ru='rvm get head && rvm reload && rvm 1.9.2@global && gem update && gem update --system && gem cleanup'
 alias bu="brew update && brew outdated"
 
 alias check='openssl sha1 -c'
 
 alias hg='cat ~/.history | grep'
+
+alias mini='open ~/Documents/mini'
 
 alias alpha='ssh root@app.mmaa.ec2.oib.com'
 alias alphadeploy='HOSTS=app.mmaa.ec2.oib.com cap production deploy:frontend'
@@ -81,7 +94,14 @@ alias hudson-ct='ssh -l root -L 8080:localhost:8080 50.16.230.56'
 alias zenoss='ssh -l root -L 9090:localhost:9090 collect.prod.ec2.oib.com'
 alias inboxscore='ssh root@app1.is.prod.ec2.oib.com'
 alias subjectlines='ssh root@app1.sl.prod.ec2.oib.com'
+alias slalpha='ssh root@app1.sl.alpha.ec2.oib.com'
+alias slalphadeploy='cap production deploy HOSTS=app1.sl.alpha.ec2.oib.com'
+alias scheduler='ssh root@ec2-75-101-236-127.compute-1.amazonaws.com'
+alias oibme='ssh root@oibme1.prod.ec2.oib.com'
 
+export NODE_PATH=/usr/local/lib/node:$NODE_PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+eval "$(rbenv init -)"
+export PATH=./bin:$PATH
