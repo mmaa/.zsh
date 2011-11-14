@@ -8,7 +8,6 @@ prompt wunjo
 
 source ~/.zsh/func/git-flow-completion.zsh
 
-# export CC='gcc-4.2'
 export EDITOR='vim'
 
 export CLICOLOR=1;
@@ -64,6 +63,8 @@ alias ns='sudo kill $(cat /usr/local/nginx/logs/nginx.pid)'
 alias nr='sudo kill -HUP $(cat /usr/local/nginx/logs/nginx.pid)'
 alias nc='mate /etc/hosts /usr/local/nginx/conf/nginx.conf'
 
+alias bundle='bundle install --binstubs && rbenv rehash'
+
 alias rs='rails server'
 alias rc='rails console'
 alias rg='rails generate'
@@ -83,7 +84,9 @@ alias check='openssl sha1 -c'
 
 alias hg='cat ~/.history | grep'
 
-alias mini='open ~/Documents/mini'
+alias sshmini='ssh -p 2222 mini@mca520.dyndns.org'
+
+alias update_macvim='brew install macvim --HEAD --custom-icons --override-system-vim --enable-clipboard'
 
 alias alpha='ssh root@app.mmaa.ec2.oib.com'
 alias alphadeploy='HOSTS=app.mmaa.ec2.oib.com cap production deploy:frontend'
