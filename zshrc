@@ -8,8 +8,7 @@ prompt wunjo
 
 source ~/.zsh/func/git-flow-completion.zsh
 
-export EDITOR=vim
-# export PAGER=vimpager
+export EDITOR='/usr/local/bin/mate -w'
 
 export CLICOLOR=1;
 
@@ -34,7 +33,7 @@ export GREP_COLOR='1;32'
 
 export PGDATA='/usr/local/var/postgres/'
 
-alias m="mvim ."
+alias m="mate ."
 alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
 
 alias a="./a.out"
@@ -93,7 +92,7 @@ alias irssi='screen -r irssi'
 alias ytf='youtube-dl -F'
 alias ytd='youtube-dl -f'
 
-alias update_macvim='brew remove macvim && brew install macvim --HEAD --custom-icons --override-system-vim --enable-clipboard'
+alias update_macvim='brew install --force --HEAD macvim --custom-icons --override-system-vim --enable-clipboard'
 
 alias alpha='ssh -R 52698:localhost:52698 root@app.mmaa.ec2.oib.com'
 alias alphadeploy='HOSTS=app.mmaa.ec2.oib.com cap production deploy:frontend'
