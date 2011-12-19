@@ -8,7 +8,8 @@ prompt wunjo
 
 source ~/.zsh/func/git-flow-completion.zsh
 
-export EDITOR='vim'
+export EDITOR=vim
+# export PAGER=vimpager
 
 export CLICOLOR=1;
 
@@ -63,7 +64,7 @@ alias ns='sudo kill $(cat /usr/local/nginx/logs/nginx.pid)'
 alias nr='sudo kill -HUP $(cat /usr/local/nginx/logs/nginx.pid)'
 alias nc='mate /etc/hosts /usr/local/nginx/conf/nginx.conf'
 
-alias bundle='bundle install --binstubs && rbenv rehash'
+alias bndl='bundle install --binstubs && rbenv rehash'
 
 alias rs='rails server'
 alias rc='rails console'
@@ -86,9 +87,15 @@ alias hg='cat ~/.history | grep'
 
 alias sshmini='ssh -p 2222 mini@mca520.dyndns.org'
 
-alias update_macvim='brew install macvim --HEAD --custom-icons --override-system-vim --enable-clipboard'
+alias irssi_start='screen -d -m -S irssi irssi'
+alias irssi='screen -r irssi'
 
-alias alpha='ssh root@app.mmaa.ec2.oib.com'
+alias ytf='youtube-dl -F'
+alias ytd='youtube-dl -f'
+
+alias update_macvim='brew remove macvim && brew install macvim --HEAD --custom-icons --override-system-vim --enable-clipboard'
+
+alias alpha='ssh -R 52698:localhost:52698 root@app.mmaa.ec2.oib.com'
 alias alphadeploy='HOSTS=app.mmaa.ec2.oib.com cap production deploy:frontend'
 alias staging='ssh root@ec2-184-72-188-76.compute-1.amazonaws.com'
 alias hudson='ssh -l root -L 8080:localhost:8080 collect.prod.ec2.oib.com'
@@ -96,13 +103,13 @@ alias jenkins='ssh -l ubuntu -L 8080:localhost:8080 ubuntu@ec2-50-17-93-145.comp
 alias hudson-ct='ssh -l root -L 8080:localhost:8080 50.16.230.56'
 alias zenoss='ssh -l root -L 9090:localhost:9090 collect.prod.ec2.oib.com'
 alias inboxscore='ssh root@app1.is.prod.ec2.oib.com'
-alias subjectlines='ssh root@app1.sl.prod.ec2.oib.com'
-alias slalpha='ssh root@app1.sl.alpha.ec2.oib.com'
+alias subjectlines='ssh -R 52698:localhost:52698 root@app1.sl.prod.ec2.oib.com'
+alias slalpha='ssh -R 52698:localhost:52698 root@app1.sl.alpha.ec2.oib.com'
 alias slalphadeploy='cap production deploy HOSTS=app1.sl.alpha.ec2.oib.com'
 alias scheduler='ssh root@ec2-75-101-236-127.compute-1.amazonaws.com'
 alias oibme='ssh root@oibme1.prod.ec2.oib.com'
 
-export NODE_PATH=/usr/local/lib/node:$NODE_PATH
+export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
