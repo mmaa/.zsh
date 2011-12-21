@@ -113,6 +113,5 @@ alias oibme='ssh root@oibme1.prod.ec2.oib.com'
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 eval "$(rbenv init -)"
 export PATH=./bin:$PATH
