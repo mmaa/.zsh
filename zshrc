@@ -94,8 +94,10 @@ alias ytd='youtube-dl -f'
 
 alias update_macvim='brew install --force --HEAD macvim --custom-icons --override-system-vim --enable-clipboard'
 
-alias alpha='ssh -R 52698:localhost:52698 root@app.mmaa.ec2.oib.com'
-alias alphadeploy='HOSTS=app.mmaa.ec2.oib.com cap production deploy:frontend'
+alias alpha_main='ssh -R 52698:localhost:52698 root@app1.alpha.ec2.oib.com'
+alias alpha_main_deploy='HOSTS=app1.alpha.ec2.oib.com cap production deploy:frontend'
+alias alpha_mmaa='ssh -R 52698:localhost:52698 root@app.mmaa.ec2.oib.com'
+alias alpha_mmaa_deploy='HOSTS=app.mmaa.ec2.oib.com cap production deploy:frontend'
 alias staging='ssh root@ec2-184-72-188-76.compute-1.amazonaws.com'
 alias hudson='ssh -l root -L 8080:localhost:8080 collect.prod.ec2.oib.com'
 alias jenkins='ssh -l ubuntu -L 8080:localhost:8080 ubuntu@ec2-50-17-93-145.compute-1.amazonaws.com'
