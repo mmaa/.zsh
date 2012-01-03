@@ -102,8 +102,8 @@ alias jenkins='ssh -l ubuntu -L 8080:localhost:8080 ubuntu@ec2-50-17-93-145.comp
 alias zenoss='ssh -l root -L 9090:localhost:9090 collect.prod.ec2.oib.com'
 alias inboxscore='ssh root@app1.is.prod.ec2.oib.com'
 alias subjectlines='ssh root@app1.sl.prod.ec2.oib.com'
-alias slalpha='ssh root@app1.sl.alpha.ec2.oib.com'
-alias slalphadeploy='cap production deploy HOSTS=app1.sl.alpha.ec2.oib.com'
+alias sl_alpha='ssh root@app1.sl.alpha.ec2.oib.com'
+alias sl_alpha_deploy='cap production deploy HOSTS=app1.sl.alpha.ec2.oib.com'
 alias scheduler='ssh root@ec2-75-101-236-127.compute-1.amazonaws.com'
 alias oibme='ssh root@oibme1.prod.ec2.oib.com'
 
