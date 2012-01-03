@@ -8,8 +8,6 @@ prompt wunjo
 
 source ~/.zsh/func/git-flow-completion.zsh
 
-export EDITOR='/usr/local/bin/mate -w'
-
 export CLICOLOR=1;
 
 export HISTFILE=$HOME/.history
