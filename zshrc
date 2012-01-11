@@ -91,8 +91,6 @@ alias irssi='screen -r irssi'
 alias ytf='youtube-dl -F'
 alias ytd='youtube-dl -f'
 
-alias update_macvim='brew install --force --HEAD macvim --custom-icons --override-system-vim --enable-clipboard'
-
 alias alpha_main='ssh root@app1.alpha.ec2.oib.com'
 alias alpha_main_deploy='HOSTS=app1.alpha.ec2.oib.com cap production deploy:frontend'
 alias alpha_mmaa='ssh root@app.mmaa.ec2.oib.com'
@@ -110,5 +108,7 @@ alias oibme='ssh root@oibme1.prod.ec2.oib.com'
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
 export PATH=./bin:$PATH
