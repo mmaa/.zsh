@@ -26,6 +26,8 @@ setopt hist_ignore_space
 setopt SHARE_HISTORY
 setopt APPEND_HISTORY
 
+export PAGER='vimpager'
+
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;32'
 
