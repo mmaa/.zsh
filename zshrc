@@ -6,8 +6,6 @@ autoload -U promptinit
 promptinit
 prompt wunjo
 
-source ~/.zsh/func/git-flow-completion.zsh
-
 export CLICOLOR=1;
 
 export HISTFILE=$HOME/.history
@@ -54,7 +52,6 @@ alias gm='git commit -m'
 alias gb='git branch'
 alias gd='git diff head'
 alias gc='git checkout'
-alias gcb='git checkout -b'
 alias gf='git flow'
 alias gh='github'
 alias gr='git reset'
