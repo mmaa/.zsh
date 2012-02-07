@@ -30,7 +30,6 @@ export GREP_COLOR='1;32'
 export PGDATA='/usr/local/var/postgres/'
 
 alias m="mate ."
-alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
 
 alias a="./a.out"
 
@@ -45,6 +44,8 @@ alias pg='ps aux | grep'
 
 alias gs='git status'
 alias ga='git add'
+alias gpl='git pull'
+alias gps='git push'
 alias gl='git lg'
 alias gla='git lga'
 alias gg='git add -u && git add . && git status'
@@ -88,6 +89,7 @@ alias irssi='screen -r irssi'
 
 alias ytf='youtube-dl -F'
 alias ytd='youtube-dl -f'
+alias yt='youtube-dl -f 22'
 
 alias alpha_main='ssh root@app1.alpha.ec2.oib.com'
 alias alpha_main_deploy='HOSTS=app1.alpha.ec2.oib.com cap production deploy:frontend'
