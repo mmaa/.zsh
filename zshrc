@@ -6,6 +6,8 @@ autoload -U promptinit
 promptinit
 prompt wunjo
 
+export EDITOR=vim
+
 export CLICOLOR=1;
 
 export HISTFILE=$HOME/.history
