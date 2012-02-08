@@ -91,6 +91,7 @@ alias ytf='youtube-dl -F'
 alias ytd='youtube-dl -f'
 alias yt='youtube-dl -f 22'
 
+alias nedry='ssh ubuntu@nedry.prod.ec2.oib.com'
 alias alpha_main='ssh ubuntu@app1.alpha.ec2.oib.com'
 alias alpha_mmaa='ssh ubuntu@app.mmaa.ec2.oib.com'
 alias staging='ssh root@ec2-184-72-188-76.compute-1.amazonaws.com'
