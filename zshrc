@@ -31,10 +31,6 @@ export GREP_COLOR='1;32'
 
 export PGDATA='/usr/local/var/postgres/'
 
-alias m="mate ."
-
-alias a="./a.out"
-
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -94,17 +90,10 @@ alias ytd='youtube-dl -f'
 alias yt='youtube-dl -f 22'
 
 alias nedry='ssh ubuntu@nedry.prod.ec2.oib.com'
-alias alpha_main='ssh ubuntu@app1.alpha.ec2.oib.com'
-alias alpha_mmaa='ssh ubuntu@app.mmaa.ec2.oib.com'
-alias staging='ssh root@ec2-184-72-188-76.compute-1.amazonaws.com'
 alias jenkins='ssh -l ubuntu -L 8080:localhost:8080 ubuntu@ec2-50-17-93-145.compute-1.amazonaws.com'
-alias zenoss='ssh -l root -L 9090:localhost:9090 collect.prod.ec2.oib.com'
-alias inboxscore='ssh root@app1.is.prod.ec2.oib.com'
 alias subjectlines='ssh root@app1.sl.prod.ec2.oib.com'
 alias sl_alpha='ssh root@app1.sl.alpha.ec2.oib.com'
 alias sl_alpha_deploy='cap production deploy HOSTS=app1.sl.alpha.ec2.oib.com'
-alias scheduler='ssh root@ec2-75-101-236-127.compute-1.amazonaws.com'
-alias oibme='ssh root@oibme1.prod.ec2.oib.com'
 
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
