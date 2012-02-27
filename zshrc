@@ -89,6 +89,7 @@ alias ytf='youtube-dl -F'
 alias ytd='youtube-dl -f'
 alias yt='youtube-dl -f 22'
 
+alias alpha='ssh ubuntu@app1.alpha.ec2.oib.com'
 alias nedry='ssh ubuntu@nedry.prod.ec2.oib.com'
 alias jenkins='ssh -l ubuntu -L 8080:localhost:8080 ubuntu@ec2-50-17-93-145.compute-1.amazonaws.com'
 alias subjectlines='ssh root@app1.sl.prod.ec2.oib.com'
