@@ -34,8 +34,8 @@ export PGDATA='/usr/local/var/postgres/'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias ls='ls -F'
-alias la='ls -F -A'
+alias ls='ls -F -1'
+alias la='ls -F -1 -A'
 alias ll='ls -F -A -o -h'
 alias top='top -o cpu -s 2 -i 2'
 alias pg='ps aux | grep'
@@ -54,12 +54,15 @@ alias gc='git checkout'
 alias gf='git flow'
 alias gh='github'
 alias gr='git reset'
+alias gp='git remote prune'
 
 alias ns='sudo kill $(cat /usr/local/nginx/logs/nginx.pid)'
 alias nr='sudo kill -HUP $(cat /usr/local/nginx/logs/nginx.pid)'
 alias nc='mate /etc/hosts /usr/local/nginx/conf/nginx.conf'
 
 alias bndl='bundle install --binstubs && rbenv rehash'
+
+alias irb='pry'
 
 alias rs='rails server'
 alias rc='rails console'
@@ -92,9 +95,6 @@ alias yt='youtube-dl -f 22'
 alias alpha='ssh ubuntu@app1.alpha.ec2.oib.com'
 alias nedry='ssh ubuntu@nedry.prod.ec2.oib.com'
 alias jenkins='ssh -l ubuntu -L 8080:localhost:8080 ubuntu@ec2-50-17-93-145.compute-1.amazonaws.com'
-alias subjectlines='ssh root@app1.sl.prod.ec2.oib.com'
-alias sl_alpha='ssh root@app1.sl.alpha.ec2.oib.com'
-alias sl_alpha_deploy='cap production deploy HOSTS=app1.sl.alpha.ec2.oib.com'
 
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
