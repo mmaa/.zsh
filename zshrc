@@ -76,8 +76,8 @@ alias sg='script/generate'
 alias gmi='gem install'
 alias gmu='gem update'
 
-alias ru='rvm get head && rvm reload && rvm 1.9.2@global && gem update && gem update --system && gem cleanup'
 alias bu="brew update && brew outdated"
+alias updatemacvim='brew remove macvim && brew install macvim --HEAD --override-system-vim'
 
 alias check='openssl sha1 -c'
 
