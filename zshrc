@@ -62,8 +62,6 @@ alias nc='mate /etc/hosts /usr/local/nginx/conf/nginx.conf'
 
 alias bndl='bundle install --binstubs && rbenv rehash'
 
-alias irb='pry'
-
 alias rs='rails server'
 alias rc='rails console'
 alias rg='rails generate'
