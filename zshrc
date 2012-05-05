@@ -40,6 +40,7 @@ alias ll='ls -F -A -o -h'
 alias top='top -o cpu -s 2 -i 2'
 alias pg='ps aux | grep'
 
+alias git='hub'
 alias gs='git status'
 alias ga='git add'
 alias gpl='git pull --prune'
