@@ -83,9 +83,6 @@ alias hg='cat ~/.history | grep'
 
 alias sshmini='ssh -p 2222 mini@mca520.dyndns.org'
 
-alias irssi_start='screen -d -m -S irssi irssi'
-alias irssi='screen -r irssi'
-
 alias ytf='youtube-dl -F'
 alias ytd='youtube-dl -f'
 alias yt='youtube-dl -f 22'
