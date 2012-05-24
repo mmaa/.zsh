@@ -7,6 +7,7 @@ promptinit
 prompt wunjo
 
 export EDITOR=vim
+bindkey -e
 
 export CLICOLOR=1;
 
