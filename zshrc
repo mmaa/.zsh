@@ -100,6 +100,6 @@ eval "$(rbenv init -)"
 
 export PATH=./bin:$PATH
 
-if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
-    tmux attach || tmux new; exit
+if [ $TERM != "screen-256color" ]; then
+  tmux attach || tmux new; exit
 fi
