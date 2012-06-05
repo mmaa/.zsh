@@ -43,7 +43,7 @@ alias pg='ps aux | grep'
 
 alias gs='git status'
 alias ga='git add'
-alias gpl='git pull --prune'
+alias gpl='git pull --prune && ctags -R .'
 alias gps='git push'
 alias gpz='gpl && gps'
 alias gl='git lg'
