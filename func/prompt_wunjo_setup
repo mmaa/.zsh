@@ -120,7 +120,7 @@ prompt_wunjo_setup() {
   # p_date="$pc[date]%D{%Y-%m-%d} $pc[time]%D{%T}$pc[reset]"
   p_date="$pc[date]%D{%Y-%m-%d}$pc[reset] $pc[time]%D{%T}$pc[reset]"
   p_time="$pc[time][%D{%T}]$pc[reset]"
-  p_user="%n@%m "
+  p_user="%n@%m:"
 
   p_line="$pc[line]%y$pc[reset]"
 
@@ -288,7 +288,7 @@ prompt_wunjo_scm_branch() {
   local -A pc
   pc=(${(kv)wunjo_prompt_colors})
 
-  echo -n "$pc[punc]:$pc[scm_branch]$(zgit_head)"
+  echo -n "$pc[punc]|$pc[scm_branch]$(zgit_head)"
 
   if zgit_inworktree; then
     if ! zgit_isindexclean; then
