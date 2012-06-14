@@ -43,9 +43,11 @@ alias pg='ps aux | grep'
 
 alias tm='tmux attach || tmux new'
 
+alias tag='ctags -R .'
+
 alias gs='git status'
 alias ga='git add'
-alias gpl='git pull --prune && ctags -R .'
+alias gpl='git pull --prune'
 alias gps='git push'
 alias gpz='gpl && gps'
 alias gl='git lg'

@@ -119,12 +119,14 @@ prompt_wunjo_setup() {
 
   # p_date="$pc[date]%D{%Y-%m-%d} $pc[time]%D{%T}$pc[reset]"
   p_date="$pc[date]%D{%Y-%m-%d}$pc[reset] $pc[time]%D{%T}$pc[reset]"
-  p_time="$pc[time][%D{%T}]$pc[reset] "
+  p_time="$pc[time][%D{%T}]$pc[reset]"
+  p_user="%n@%m "
 
   p_line="$pc[line]%y$pc[reset]"
 
   PROMPT=""
   PROMPT+="$p_time"
+  PROMPT+="$p_user"
   # if [ $verbose ]; then
   #   PROMPT+="$pc[host]%m$pc[reset] "
   # fi
