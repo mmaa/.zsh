@@ -126,7 +126,7 @@ prompt_wunjo_setup() {
 
   PROMPT=""
   PROMPT+="$p_time"
-  PROMPT+="$p_user"
+  # PROMPT+="$p_user"
   # if [ $verbose ]; then
   #   PROMPT+="$pc[host]%m$pc[reset] "
   # fi
@@ -148,7 +148,8 @@ prompt_wunjo_setup() {
   # PROMPT+=" $pc[#]%#$pc[reset] "
   PROMPT+="%(?.. $pc[rc]%1v$pc[reset])"
 
-  PROMPT+="$pc[#]%#$pc[reset] "
+  # PROMPT+="$pc[#]%#$pc[reset] "
+  PROMPT+="$pc[#]❱$pc[reset] "
 
   # RPROMPT=
   # if [ $verbose ]; then
@@ -288,7 +289,7 @@ prompt_wunjo_scm_branch() {
   local -A pc
   pc=(${(kv)wunjo_prompt_colors})
 
-  echo -n "$pc[punc]|$pc[scm_branch]$(zgit_head)"
+  echo -n "$pc[punc] $pc[scm_branch]$(zgit_head)"
 
   if zgit_inworktree; then
     if ! zgit_isindexclean; then
