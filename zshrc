@@ -99,7 +99,6 @@ alias jenkins='ssh -l ubuntu -L 8080:localhost:8080 ubuntu@ec2-50-17-93-145.comp
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 export PATH=./bin:$PATH
