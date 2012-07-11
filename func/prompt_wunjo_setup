@@ -125,7 +125,8 @@ prompt_wunjo_setup() {
   p_line="$pc[line]%y$pc[reset]"
 
   PROMPT=""
-  PROMPT+="$p_time"
+  PROMPT+="$pc[time]●$pc[reset] "
+  # PROMPT+="$p_time"
   # PROMPT+="$p_user"
   # if [ $verbose ]; then
   #   PROMPT+="$pc[host]%m$pc[reset] "
