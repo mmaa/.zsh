@@ -94,9 +94,7 @@ alias yt='youtube-dl -f 22'
 
 alias alpha='ssh ubuntu@app1.alpha.ec2.oib.com'
 alias nedry='ssh ubuntu@nedry.prod.ec2.oib.com'
-alias jenkins='ssh -l ubuntu -L 8080:localhost:8080 ubuntu@ec2-50-17-93-145.compute-1.amazonaws.com'
 
-export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 eval "$(rbenv init -)"
