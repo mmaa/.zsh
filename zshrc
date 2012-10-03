@@ -6,7 +6,7 @@ autoload -U promptinit
 promptinit
 prompt wunjo
 
-export EDITOR=vim
+export EDITOR='mate -w'
 bindkey -e
 
 export CLICOLOR=1;
