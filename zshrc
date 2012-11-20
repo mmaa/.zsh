@@ -97,6 +97,7 @@ alias nedry='ssh ubuntu@nedry.prod.ec2.oib.com'
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-eval "$(rbenv init -)"
+export RBENV_ROOT=/usr/local/opt/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export PATH=./bin:$PATH
