@@ -16,7 +16,7 @@ export HISTSIZE=99999
 export SAVEHIST=99999
 
 setopt hist_ignore_dups # ignore duplication command history list
-setopt share_history # share command history data
+# setopt share_history # share command history data
 
 setopt hist_verify
 setopt inc_append_history
@@ -56,6 +56,7 @@ alias gg='git add -u && git add . && git status'
 alias gm='git commit'
 alias gb='git branch'
 alias gd='git diff head'
+alias gdt='git difftool head'
 alias gc='git checkout'
 alias gf='git flow'
 alias gh='github'
@@ -101,3 +102,6 @@ export RBENV_ROOT=/usr/local/opt/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export PATH=./bin:$PATH
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
