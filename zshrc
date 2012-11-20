@@ -7,6 +7,7 @@ promptinit
 prompt wunjo
 
 export EDITOR='vim'
+export PAGER='vimpager'
 bindkey -e
 
 export CLICOLOR=1;
@@ -97,6 +98,10 @@ alias nedry='ssh ubuntu@nedry.prod.ec2.oib.com'
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-eval "$(rbenv init -)"
+export RBENV_ROOT=/usr/local/opt/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export PATH=./bin:$PATH
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
