@@ -61,6 +61,7 @@ alias gc='git checkout'
 alias gf='git flow'
 alias gh='github'
 alias gr='git reset'
+alias gpr='hub pull-request'
 
 alias ns='sudo kill $(cat /usr/local/nginx/logs/nginx.pid)'
 alias nr='sudo kill -HUP $(cat /usr/local/nginx/logs/nginx.pid)'
