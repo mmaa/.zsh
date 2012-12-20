@@ -91,8 +91,8 @@ alias hg='cat ~/.history | grep'
 alias sshmini='ssh -p 2222 mini@mca520.dyndns.org'
 
 alias ytf='youtube-dl -F'
-alias ytd='youtube-dl -f'
-alias yt='youtube-dl -f 22'
+alias ytd='youtube-dl -t -f'
+alias yt='cd ~/Desktop && youtube-dl -f 22 -t'
 
 alias alpha='ssh ubuntu@app1.alpha.ec2.oib.com'
 alias nedry='ssh ubuntu@nedry.prod.ec2.oib.com'
