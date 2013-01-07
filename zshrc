@@ -15,17 +15,13 @@ export HISTFILE=$HOME/.history
 export HISTSIZE=99999
 export SAVEHIST=99999
 
-setopt hist_ignore_dups # ignore duplication command history list
-# setopt share_history # share command history data
-
+setopt hist_ignore_dups
 setopt hist_verify
 setopt inc_append_history
 setopt extended_history
 setopt hist_expire_dups_first
 setopt hist_ignore_space
-
-setopt SHARE_HISTORY
-setopt APPEND_HISTORY
+setopt append_history
 
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;32'
