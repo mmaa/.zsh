@@ -120,12 +120,12 @@ prompt_wunjo_setup() {
   # p_date="$pc[date]%D{%Y-%m-%d} $pc[time]%D{%T}$pc[reset]"
   p_date="$pc[date]%D{%Y-%m-%d}$pc[reset] $pc[time]%D{%T}$pc[reset]"
   p_time="$pc[time][%D{%T}]$pc[reset]"
-  p_user="%n@%m:"
+  p_user="%n@%m$pc[#]:"
 
   p_line="$pc[line]%y$pc[reset]"
 
   PROMPT=""
-  PROMPT+="$pc[time]●$pc[reset] "
+  PROMPT+="$pc[time]●$pc[reset] $p_user"
   # PROMPT+="$p_time"
   # PROMPT+="$p_user"
   # if [ $verbose ]; then
@@ -144,7 +144,7 @@ prompt_wunjo_setup() {
 #   PROMPT+="
 # "
   # PROMPT+="$pc[hist]%h$pc[reset] "
-  PROMPT+="$pc[shortpath]%1~$pc[reset]"
+  PROMPT+="$pc[shortpath]%2~$pc[reset]"
   PROMPT+="\$(prompt_wunjo_scm_branch)"
   # PROMPT+=" $pc[#]%#$pc[reset] "
   PROMPT+="%(?.. $pc[rc]%1v$pc[reset])"
@@ -290,7 +290,7 @@ prompt_wunjo_scm_branch() {
   local -A pc
   pc=(${(kv)wunjo_prompt_colors})
 
-  echo -n "$pc[punc]/$pc[scm_branch]$(zgit_head)"
+  echo -n "$pc[punc]|$pc[scm_branch]$(zgit_head)"
 
   if zgit_inworktree; then
     if ! zgit_isindexclean; then
