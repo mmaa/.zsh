@@ -6,7 +6,7 @@ autoload -U promptinit
 promptinit
 prompt wunjo
 
-export EDITOR='vim'
+export EDITOR='mate -w'
 bindkey -e
 
 export CLICOLOR=1;
@@ -39,6 +39,8 @@ alias pg='ps aux | grep'
 
 alias tm='tmux attach || tmux -u'
 
+alias m='mate .'
+
 alias tag='ctags -R .'
 
 alias gs='git status'
@@ -48,7 +50,7 @@ alias gps='git push'
 alias gpz='gpl && gps'
 alias gl='git lg'
 alias gla='git lga'
-alias gg='git add -u && git add . && git status'
+alias gg='git add . && git add -u && git status'
 alias gm='git commit'
 alias gb='git branch'
 alias gd='git diff head'
@@ -58,6 +60,7 @@ alias gf='git flow'
 alias gh='github'
 alias gr='git reset'
 alias gpr='hub pull-request'
+alias ggrep='git grep'
 
 alias ns='sudo kill $(cat /usr/local/nginx/logs/nginx.pid)'
 alias nr='sudo kill -HUP $(cat /usr/local/nginx/logs/nginx.pid)'
@@ -91,7 +94,7 @@ alias ytd='youtube-dl -t -f'
 alias yt='cd ~/Desktop && youtube-dl -f 22 -t'
 
 alias alpha='ssh ubuntu@app1.alpha.ec2.oib.com'
-alias nedry='ssh ubuntu@nedry.prod.ec2.oib.com'
+alias bastion='ssh macosta@bastion.prod.ec2.oib.com'
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
