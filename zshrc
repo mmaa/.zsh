@@ -62,12 +62,6 @@ alias gr='git reset'
 alias gpr='hub pull-request'
 alias ggrep='git grep'
 
-alias ns='sudo kill $(cat /usr/local/nginx/logs/nginx.pid)'
-alias nr='sudo kill -HUP $(cat /usr/local/nginx/logs/nginx.pid)'
-alias nc='mate /etc/hosts /usr/local/nginx/conf/nginx.conf'
-
-alias bndl='bundle install --binstubs && rbenv rehash'
-
 alias rs='rails server'
 alias rc='rails console'
 alias rg='rails generate'
@@ -98,7 +92,7 @@ alias bastion='ssh macosta@bastion.prod.ec2.oib.com'
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-export RBENV_ROOT=/usr/local/opt/rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export PATH=./bin:$PATH
