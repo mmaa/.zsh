@@ -44,7 +44,6 @@ alias m='mate .'
 alias tag='ctags -R .'
 
 alias gs='git status'
-alias ga='git add'
 alias gpl='git pull --prune'
 alias gps='git push'
 alias gpz='gpl && gps'
@@ -56,29 +55,13 @@ alias gb='git branch'
 alias gd='git diff head'
 alias gdt='git difftool head'
 alias gc='git checkout'
-alias gf='git flow'
-alias gh='github'
-alias gr='git reset'
 alias gpr='hub pull-request'
 alias ggrep='git grep'
-
-alias ns='sudo kill $(cat /usr/local/nginx/logs/nginx.pid)'
-alias nr='sudo kill -HUP $(cat /usr/local/nginx/logs/nginx.pid)'
-alias nc='mate /etc/hosts /usr/local/nginx/conf/nginx.conf'
-
-alias bndl='bundle install --binstubs && rbenv rehash'
 
 alias rs='rails server'
 alias rc='rails console'
 alias rg='rails generate'
 alias rr='rails runner'
-
-alias ss='script/server webrick'
-alias sc='script/console'
-alias sg='script/generate'
-
-alias gmi='gem install'
-alias gmu='gem update'
 
 alias bu="brew update && brew outdated"
 alias updatemacvim='brew remove macvim && brew install macvim --HEAD --override-system-vim'
@@ -93,12 +76,9 @@ alias ytf='youtube-dl -F'
 alias ytd='youtube-dl -t -f'
 alias yt='cd ~/Desktop && youtube-dl -f 22 -t'
 
-alias alpha='ssh ubuntu@app1.alpha.ec2.oib.com'
-alias bastion='ssh macosta@bastion.prod.ec2.oib.com'
-
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-export RBENV_ROOT=/usr/local/opt/rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export PATH=./bin:$PATH
