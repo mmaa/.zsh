@@ -63,6 +63,8 @@ alias rc='rails console'
 alias rg='rails generate'
 alias rr='rails runner'
 
+alias resetopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+
 alias bu="brew update && brew outdated"
 alias updatemacvim='brew remove macvim && brew install macvim --HEAD --override-system-vim'
 
