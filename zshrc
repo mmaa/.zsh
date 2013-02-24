@@ -68,8 +68,6 @@ alias resetopenwith='/System/Library/Frameworks/CoreServices.framework/Framework
 alias bu="brew update && brew outdated"
 alias updatemacvim='brew remove macvim && brew install macvim --HEAD --override-system-vim'
 
-alias check='openssl sha1 -c'
-
 alias hg='cat ~/.history | grep'
 
 alias sshmini='ssh -p 2222 mini@mca520.dyndns.org'
