@@ -6,7 +6,9 @@ autoload -U promptinit
 promptinit
 prompt wunjo
 
-export EDITOR='mate -w'
+export EDITOR='vim'
+alias m='mvim .'
+
 bindkey -e
 
 export CLICOLOR=1;
@@ -38,8 +40,6 @@ alias top='top -o cpu -s 2 -i 2'
 alias pg='ps aux | grep'
 
 alias tm='tmux attach || tmux -u'
-
-alias m='mate .'
 
 alias tag='ctags -R .'
 
