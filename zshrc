@@ -7,7 +7,7 @@ promptinit
 prompt wunjo
 
 export EDITOR='vim'
-alias m='mvim .'
+alias m='mate .'
 
 bindkey -e
 
@@ -67,7 +67,7 @@ alias rr='rails runner'
 alias resetopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 
 alias bu="brew update && brew outdated"
-alias updatemacvim='brew remove macvim && brew install macvim --HEAD --override-system-vim'
+alias updatemacvim='brew remove macvim && brew install macvim --HEAD'
 
 alias hg='cat ~/.history | grep'
 
