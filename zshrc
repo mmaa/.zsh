@@ -6,6 +6,7 @@ autoload -U promptinit
 promptinit
 prompt wunjo
 
+export PAGER='vimpager'
 export EDITOR='vim'
 alias m='mate .'
 
